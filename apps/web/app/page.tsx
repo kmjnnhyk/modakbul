@@ -1,12 +1,19 @@
-import { prisma } from "@repo/database";
+"use client";
 
-export default async function IndexPage() {
-  const users = await prisma.user.findMany();
+import { useGetUsersQuery } from "../gql/graphql";
+
+export default function Page() {
+  const { loading, error, data } = useGetUsersQuery();
+
+  if (loading) return <p>Loading...</p>;
+
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div>
-      <h1>Hello World</h1>
-      <pre>{JSON.stringify(users, null, 2)}</pre>
-    </div>
+    <ul>
+      {data?.users.map((post, index) => {
+        return <li key={index}>{post.email}</li>;
+      })}
+    </ul>
   );
 }

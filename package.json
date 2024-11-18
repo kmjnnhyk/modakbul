@@ -12,9 +12,12 @@
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "generate": "turbo run generate",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "codegen": "graphql-codegen"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.3",
+    "@modakbul/typescript-config": "workspace:^",
     "prettier": "^3.2.5",
     "prisma": "5.10.2",
     "tsx": "^4.7.1",
@@ -27,5 +30,6 @@
   "dependencies": {
     "@prisma/client": "5.10.2"
   },
-  "packageManager": "pnpm@9.9.0"
+  "packageManager": "pnpm@9.9.0",
+  "prettier": "@modakbul/prettier-config"
 }

@@ -1,8 +1,12 @@
 {
-  "name": "@repo/typescript-config",
+  "name": "@modakbul/typescript-config",
   "version": "0.0.0",
   "private": true,
   "publishConfig": {
     "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.3"
   }
 }
