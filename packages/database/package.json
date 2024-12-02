@@ -2,16 +2,17 @@
   "name": "@modakbul/database",
   "version": "1.0.0",
   "main": "generated/prisma-client/index.js",
-  "types": "generated/prisma-client/index.d.js",
+  "types": "generated/prisma-client/index.d.ts",
   "module": "src/index.ts",
   "scripts": {
     "db:generate": "prisma generate",
     "db:push": "prisma db push --skip-generate"
   },
-  "dependencies": {
-    "@prisma/client": "^5.0.0"
-  },
   "devDependencies": {
+    "@types/node": "^22.10.1",
     "prisma": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "5.10.2"
   }
 }

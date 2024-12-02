@@ -1,19 +1,32 @@
-"use client";
+'use client';
 
-import { useGetUsersQuery } from "../gql/graphql";
+import { useEffect, useState } from 'react';
 
 export default function Page() {
-  const { loading, error, data } = useGetUsersQuery();
+  const [data, setData] = useState(null);
+  const [error, setError] = useState<any>(null);
 
-  if (loading) return <p>Loading...</p>;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch('http://localhost:3001');
+        const result = await res.json();
+        setData(result);
+      } catch (error) {
+        setError(error);
+      }
+    };
 
-  if (error) return <p>Error: {error.message}</p>;
+    fetchData();
+  }, []);
+
+  if (error) {
+    return <div>Error loading page</div>;
+  }
 
   return (
-    <ul>
-      {data?.users.map((post, index) => {
-        return <li key={index}>{post.email}</li>;
-      })}
-    </ul>
+    <div>
+      {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Loading...'}
+    </div>
   );
 }
