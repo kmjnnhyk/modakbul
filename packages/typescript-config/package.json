@@ -1,0 +1,20 @@
+{
+  "name": "@modakbul/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "exports": {
+    "./base": {
+      "default": "./src/base.tsconfig.json"
+    },
+    "./next": {
+      "default": "./src/next.tsconfig.json"
+    },
+    "./nest": {
+      "default": "./src/nest.tsconfig.json"
+    }
+  }
+}

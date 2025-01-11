@@ -1,8 +1,12 @@
 {
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ],
-  "cSpell.words": ["codegen", "modakbul", "nestjs", "nextjs"]
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": ["codegen", "modakbul", "nestjs", "nextjs"],
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "files.exclude": {
+    "**/*.js": { "when": "$(basename).ts" },
+    "node_modules": true,
+    "dist": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

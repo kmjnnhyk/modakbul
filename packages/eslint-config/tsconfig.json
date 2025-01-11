@@ -1,0 +1,12 @@
+{
+  "extends": "@modakbul/typescript-config/base",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
+    "target": "es2016",
+    "declaration": true
+  }
+}
