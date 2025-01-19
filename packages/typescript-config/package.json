@@ -19,5 +19,8 @@
     "./vite-vanilla": {
       "default": "./src/vite-vanilla.tsconfig.json"
     }
+  },
+  "dependencies": {
+    "typescript": "^5.7.3"
   }
 }
