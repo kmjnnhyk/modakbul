@@ -15,6 +15,9 @@
     },
     "./nest": {
       "default": "./src/nest.tsconfig.json"
+    },
+    "./vite-vanilla": {
+      "default": "./src/vite-vanilla.tsconfig.json"
     }
   }
 }
