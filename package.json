@@ -1,24 +1,32 @@
 {
-    "name": "modakbul",
-    "version": "0.0.1",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "build": "turbo run build",
-        "db:migrate:deploy": "turbo run db:migrate:deploy",
-        "db:push": "turbo run db:push",
-        "db:seed": "turbo run db:seed",
-        "dev": "turbo run dev",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "generate": "turbo run generate",
-        "lint": "turbo run lint"
+  "name": "modakbul",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "db:migrate:deploy": "turbo run db:migrate:deploy",
+    "db:push": "turbo run db:push",
+    "db:seed": "turbo run db:seed",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "generate": "turbo run generate",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3",
+    "prettier": "^3.4.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "pnpm": {
+    "overrides": {
+      "typescript": "^5.7.3"
     },
-    "devDependencies": {
-        "turbo": "^2.3.3",
-        "prettier": "^3.4.2"
-    },
-    "engines": {
-        "node": ">=18"
-    },
-    "packageManager": "pnpm@9.9.0"
+    "executionEnv": {
+      "nodeVersion": "23.3.0"
+    }
+  }
 }
